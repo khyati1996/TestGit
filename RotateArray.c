@@ -6,10 +6,10 @@ int main()
 		scanf("%d",&d);
 		for(int i=0;i<d;i++)
 			{
-			printf("enter the size of the 			array and rotations");
+			printf("enter the size of the array and rotations");
 			scanf("%d %d", &size, &rot);
 			int arr[size];
-			printf("enter the array 				elements");
+			printf("enter the array elements");
 			for(int i=0;i<size;i++)
 			{
 		scanf("%d",&arr[i]);			
