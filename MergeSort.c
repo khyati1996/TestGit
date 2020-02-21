@@ -1,12 +1,11 @@
 #include<stdio.h>
-#include<conio.h>
 void MergeSort(int arr[],int l,int r);
 void Merge(int arr[], int l,int m,int r);
 void print(int arr[],int size);
 //Driver Method
 int main()
     {
-        int arr[]= {5,4,3,2,1};
+        int arr[]= {5,4,2,1,6};
         int size= sizeof(arr)/sizeof(arr[0]);
         printf("Given aRRAY\n");
         print(arr,size);
@@ -37,16 +36,18 @@ void Merge(int arr[],int l,int m,int r)
         n1=m-l+1;
         n2=r-m;
         int arr1[n1],arr2[n2];
-        int i=0,j=0,k=l;
+        int i,j,k;
 
-        for(i=0;i<n1;i++)
+        for(int i=0;i<n1;i++)
             {
                 arr1[i]=arr[i+l];
+		
             }
-        for(j=0;j<n2;j++)
+        for(int j=0;j<n2;j++)
             {
-                arr1[j]=arr[m+j+1];
+                arr2[j]=arr[m+j+1];
             }
+	i=0,j=0,k=l;
         while(i<n1 && j<n2)
             {
 
@@ -57,7 +58,7 @@ void Merge(int arr[],int l,int m,int r)
                 }
                 else
                 {
-                    arr[k]=arr1[j];
+                    arr[k]=arr2[j];
                     j++;
                 }
                 k++;
@@ -71,7 +72,7 @@ void Merge(int arr[],int l,int m,int r)
         }
         while(j<n2)
         {
-            arr[k]=arr1[j];
+            arr[k]=arr2[j];
             j++;
             k++;
         }
